@@ -1,0 +1,22 @@
+{
+  "name": "init",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha test/*.js --exit"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.5",
+    "debug": "~4.3.1",
+    "express": "~4.17.1",
+    "http-errors": "~1.8.0",
+    "pug": "~2.0.4",
+    "morgan": "~1.10.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.2.1"
+  }
+}
