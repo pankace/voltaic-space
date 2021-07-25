@@ -1,3 +1,4 @@
+/*
 const users = [
   {
     id: 1,
@@ -38,3 +39,4 @@ function getSingleUser(req, res) {
     message: "user record not found",
   });
 }
+*/
