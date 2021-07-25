@@ -1,4 +1,4 @@
-/*/ Import the dependencies for testing
+// Import the dependencies for testing
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const app = require("../app");
@@ -43,4 +43,3 @@ describe("Users", () => {
     });
   });
 });
-*/
