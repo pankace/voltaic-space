@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 
-const max = 300;
+const max = 33;
 
 let i = 0;
 let lastWrite = 0;

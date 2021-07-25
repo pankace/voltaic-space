@@ -1,11 +1,18 @@
 :root {
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 450px) {
+  :root {
+    font-size: 16px;
+  }
 }
 
 body {
   padding: 0;
   margin: 0;
-  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -35,4 +42,43 @@ a {
   right: 3rem;
   font-size: 1.5rem;
   color: #eee;
+}
+
+.fire-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/fire.gif");
+  background-color: #e10303;
+  background-repeat: none;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.confetti-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/confetti.gif");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.success-helper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eee;
+  font-size: 1.75rem;
+  text-align: center;
+  width: 70vw;
+  z-index: 2;
+}
+
+h1, p, a {
+  margin: 0;
+  padding: 0;
 }
