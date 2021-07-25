@@ -1,24 +1,5 @@
 extends layout
 
-head
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Document
-  script(defer='').
-    const ws = new WebSocket('https://stupid-hack-start-jtoj4b34ca-as.a.run.app/')
-    console.log(ws)
-    ws.onmessage = (message) => {
-    document.getElementById('haha').innerHTML = message.data
-    }
-    function handleClick(){
-    const g = document.getElementById('haha')
-    ws.send("")
-    }
-h1#haha
-button(onclick='handleClick();')
-  | click me
-
 block content
   h1= title
   p Welcome to #{title}
