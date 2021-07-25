@@ -3,4 +3,4 @@ extends layout
 block content
   div(class="scene-container")
     p(class="progress") #{Math.round((count / max) * 100)}%
-    img(src="/astronaut.png" class="astro" style=`bottom: 30vh; left: ${(count / max) * 100}vw;` alt="astro")
+    img(src="/astronaut.png" class="astro" style=`bottom: 30vh; left: ${(count / max) * 100}vw; transform: rotate(${Math.round((count / max) * 16 * 360)}deg)` alt="astro")
