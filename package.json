@@ -4,19 +4,21 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha test/*.js --exit"
+    "test": "mocha test/*.js --exit",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.5",
     "debug": "~4.3.1",
     "express": "~4.17.1",
     "http-errors": "~1.8.0",
-    "pug": "~2.0.4",
-    "morgan": "~1.10.0"
+    "morgan": "~1.10.0",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "chai": "4.2.0",
     "chai-http": "^4.3.0",
-    "mocha": "^8.2.1"
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.12"
   }
 }

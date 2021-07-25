@@ -1,9 +1,27 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const fs = require('fs');
+
+const max = 300;
+
+let i = 0;
+let lastWrite = 0;
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'stupid' });
+router.get('*', function(req, res, next) {
+  i++;
+  fs.writeFileSync('count.txt', String(i));
+
+  if (i > max) {
+    return res.render('success');
+  }
+  
+  if (Date.now() - lastWrite > 500) {
+    let count = fs.readFileSync('count.txt');
+    res.render('index', { count, max });
+    lastWrite = Date.now()
+  }
+
 });
 
 module.exports = router;

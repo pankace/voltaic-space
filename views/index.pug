@@ -1,5 +1,6 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="scene-container")
+    p(class="progress") #{Math.round((count / max) * 100)}%
+    img(src="/astronaut.png" class="astro" style=`bottom: 30vh; left: ${(count / max) * 100}vw;` alt="astro")
