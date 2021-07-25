@@ -1,5 +1,5 @@
 FROM node:8-wheezy
-
+#should be faster
 ARG buildtime_variable=staging
 ENV NODE_ENV=$buildtime_variable
 
