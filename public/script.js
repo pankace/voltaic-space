@@ -24,3 +24,9 @@ ws.onmessage = function (msg) {
 
   return false
 }
+
+ws.onopen = function(){
+  const astrokun = document.getElementsByClassName("astro")[0]
+
+  astrokun.style.opacity = "1"
+}
