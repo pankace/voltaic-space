@@ -23,13 +23,6 @@ app.use(express.static(path.join(__dirname, "public")))
 app.use("/", indexRouter)
 //app.use('/users', usersRouter);
 
-app.ws("/ws", function (ws, req) {
-  ws.on("message", function (msg) {
-    console.log(msg)
-  })
-  console.log("socket", req.testing)
-})
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404))
