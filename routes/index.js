@@ -8,7 +8,7 @@ const fs = require("fs")
 
 const max = 1000000
 
-let i = 0
+let i = +process.env.START || 0
 let lastWrite = Date.now()
 fs.writeFileSync("count.txt", "0")
 
