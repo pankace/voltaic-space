@@ -10,14 +10,15 @@ const ws = new WebSocket(_endpoint())
 ws.onmessage = function (msg) {
   const { i, max } = JSON.parse(msg.data)
 
-  console.log(msg.data)
-  console.log(msg)
-
   const astrokun = document.getElementsByClassName("astro")[0]
 
   const progressbar = document.getElementsByClassName("progress")[0]
 
-  astrokun.style.transform = `translateX(${(i * 100) / max}vw)`
+  if (i/max >= 1) {
+    window.location.reload();
+  }
+
+  astrokun.style.transform = `translateX(calc(${(i * 100) / max}vw - 110px)) rotate(${Math.round(((i * 360) / max) * 4)}deg)`
 
   progressbar.innerHTML = `${~~((i * 100) / max)}%`
 

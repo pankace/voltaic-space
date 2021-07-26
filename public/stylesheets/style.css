@@ -19,6 +19,11 @@ a {
   color: #00B7FF;
 }
 
+@keyframes disco {
+  from { filter: hue-rotate(0deg) saturate(250%) contrast(105%); }
+  to { filter: hue-rotate(360deg) saturate(250%) contrast(105%); }
+}
+
 .scene-container {
   background-image: url("/bg.webp"), url("/bg.png");
   background-color: #3300ee;
@@ -26,17 +31,60 @@ a {
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  position: relative;
+  z-index: -1;
+  filter: hue-rotate(0deg) saturate(250%) contrast(105%);
+  animation: disco 5s ease-in-out 0s infinite;
 }
 
 .astro {
   position: fixed;
   height: auto;
   width: 220px;
+  bottom: 30vh;
+  left: 0;
+}
+
+.motif {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #eee;
+}
+
+.motif::before,
+.motif::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.motif::before {
+  /* ... anything needed to make it identical */
+
+  /* variation */
+  left: 2px;
+  text-shadow: -1px 0 red;
+  
+  /* important: opaque background masks the original */
+  background: #333;
+}
+.motif::after {
+  /* ... anything needed to make it identical */
+
+  /* variation */
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  
+  /* important: opaque background masks the original */
+  background: #332;
 }
 
 .progress {
-  margin: 0;
-  padding: 0;
   position: absolute;
   top: 3rem;
   right: 3rem;
