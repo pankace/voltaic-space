@@ -84,9 +84,17 @@ a {
   background: #332;
 }
 
-.progress {
+.progress-percent {
   position: absolute;
   top: 3rem;
+  right: 3rem;
+  font-size: 1.5rem;
+  color: #eee;
+}
+
+.progress-slash {
+  position: absolute;
+  top: 6rem;
   right: 3rem;
   font-size: 1.5rem;
   color: #eee;
