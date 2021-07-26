@@ -6,10 +6,11 @@ const clients = new Set()
 const router = express.Router()
 const fs = require("fs")
 
-const max = 1000
+const max = 1000000
 
 let i = 0
-let lastWrite = 0
+let lastWrite = Date.now()
+fs.writeFileSync("count.txt", "0")
 
 router.ws("/ws", function (ws, req) {
   //Add client to Set. NB: The list being a Set will help to avoid adding duplicate clients
@@ -27,19 +28,20 @@ router.ws("/ws", function (ws, req) {
 })
 
 /* GET home page. */
+
 router.get("*", function (req, res, next) {
   i++
-  fs.writeFileSync("count.txt", String(i))
 
   if (i > max) {
     return res.render("success")
   }
 
-  if (Date.now() - lastWrite > 500) {
-    let count = fs.readFileSync("count.txt")
-    res.render("index", { count, max })
+  if (Date.now() - lastWrite > 3000) {
     lastWrite = Date.now()
+    fs.writeFileSync("counter.txt", String(i))
   }
+
+  res.render("index", { i, max })
 
   console.log(`current clients: ${clients.size}`, `count: ${i}/${max}`)
 
@@ -47,6 +49,7 @@ router.get("*", function (req, res, next) {
 })
 
 function broadcast() {
+  console.log("enter broadcast")
   clients.forEach((socket) => {
     const data = JSON.stringify({ i, max })
     try {
@@ -55,6 +58,7 @@ function broadcast() {
       console.error("little error don't mind me")
     }
   })
+  console.log("left broadcast")
 }
 
 module.exports = router
