@@ -6,7 +6,7 @@ const clients = new Set()
 const router = express.Router()
 const fs = require("fs")
 
-const max = 1_000_000
+const max = 1000
 
 let i = 0
 let lastWrite = 0
