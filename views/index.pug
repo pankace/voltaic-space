@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  div(class="scene-container")
+  div(class="scene-container" style=`filter: hue-rotate(${Math.round((count / max) * 16 * 360)}deg) saturate(150%) contrast(120%);`)
     p(class="progress") #{Math.round((count / max) * 100)}%
-    img(src="/astronaut.png" class="astro" style=`bottom: 30vh; left: 1000vw;` alt="astro")
+    img(src="/astronaut.png" class="astro" style=`bottom: 30vh; left: 1000vw;transform: rotate(${Math.round((count / max) * 16 * 360)}deg)` alt="astro")
     script(src="/script.js")
