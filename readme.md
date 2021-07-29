@@ -1,5 +1,14 @@
+---
+fontfamily: times
+---
+
 # Stupid-Hackathon-V-Opening-Ceremony
-During the opening event of this hackathon 
+This was the first challenge during the During the opening event of this hackathon 
+The challenge was to cumulatively as a community refresh a webpage one million times 
+
+_there were no rules_
+
+
 
 ## Getting Started
 
@@ -13,4 +22,8 @@ The things you need before installing the software.
 * And you need this
 * Oh, and don't forget this
 
-#
+## Lessons Learned and failures 
+
+
+
+
