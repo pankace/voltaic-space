@@ -1,7 +1,9 @@
 
 # Stupid-Hackathon-V-Opening-Ceremony
 This was the first challenge during the During the opening event of this hackathon 
-The challenge was to cumulatively as a community refresh a webpage one million times <br/>
+The challenge was to cumulatively as a community refresh a webpage one million times 
+(Tt looked something like this.)[https://betich.github.io/stupid-opening-ceremony/] (ze thinggy)[https://betich.github.io/stupid-opening-ceremony/]
+<br/>
                                                                      
 _there were no rules_
                                                                         
