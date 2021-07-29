@@ -9,10 +9,14 @@ _there were no rules_
 This of corse means that all types of solution for this challenge were on the table such as utilization of botnets, ddos and scripts :P 
 ```bash
 #an example of one such script
-while true; do sleep 1; curl <url for the event https://betich.github.io/stupid-opening-ceremony/>; done
+while true; 
+  do
+    sleep 1; 
+    curl <url for the event https://betich.github.io/stupid-opening-ceremony/>; 
+  done
 ```
 ## contributors
-[pankace](https://github.com/pankace) backend and server 
+[pankace](https://github.com/pankace) backend and server
 
 [betich](https://github.com/betich) front end main dev 
 
