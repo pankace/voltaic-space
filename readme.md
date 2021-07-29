@@ -13,8 +13,11 @@ while true; do sleep 1; curl <url for the event https://betich.github.io/stupid-
 ```
 ## contributors
 [pankace](https://github.com/pankace) backend and server 
+
 [betich](https://github.com/betich) front end main dev 
+
 [ImSoZRious](https://github.com/ImSoZRious) front end 
+
 [matcha](https://github.com/msp5382) backend and server 
 
 ## Getting Started.
