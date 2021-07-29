@@ -9,7 +9,7 @@ The challenge was to cumulatively as a community refresh a webpage one million t
 _there were no rules_
                                                                                       
 This of corse means that all types of solution for this challenge were on the table such as utilization of botnets and ddos scripts :P 
-```pankace
+```bash
 #an example of one such script
 while true; do sleep 1; curl https://stupid-hack-start-jtoj4b34ca-as.a.run.app/; done
 ```
