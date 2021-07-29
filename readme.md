@@ -25,16 +25,7 @@ while true;
 [matcha](https://github.com/msp5382) backend and server 
 
 ## Getting Started.
-
-```geexm
-npm  install 
-
-npm  build 
-
-npm  start
-```
-server should be running on localhost's port 8080
-  * a point should be made that this could also be ran on docker though there might be some issues with the docker and it not syncing the refresh count across devices.
+steps to utilize this web 
 
 ### Prerequisites.
 
@@ -65,7 +56,20 @@ Worked very well and actually went quite well.
  $ node
  ```
  * use volta to lauch the page
- * the page will be on 8080 external ip + port will be the default url unless dns forwarded 
+ 
+
+  ### launching page with npm 
+
+  ```geexm
+  npm  install 
+
+  npm  build 
+
+  npm  start
+  ```
+  server should be running on localhost's port 8080
+  * a point should be made that this could also be ran on docker though there might be some issues with the docker and it not syncing the refresh count across devices.
+  * the page will be on 8080 external ip + port will be the default url unless dns forwarded 
 
 ### usage 
 
