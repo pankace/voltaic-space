@@ -1,6 +1,4 @@
----
-fontfamily: times
----
+
 # Stupid-Hackathon-V-Opening-Ceremony
 This was the first challenge during the During the opening event of this hackathon 
 The challenge was to cumulatively as a community refresh a webpage one million times <br/>
